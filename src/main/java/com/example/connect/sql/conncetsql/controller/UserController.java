@@ -25,8 +25,4 @@ public class UserController {
     private void updateUser(User user, @PathVariable("id") String id) {
         userService.updateUser(user, id);
     }
-    @RequestMapping("/user_details")
-    public List<Address> getUserDetails() {
-        return userService.getUserAddress();
-    }
 }

@@ -6,7 +6,7 @@ import org.springframework.data.repository.cdi.Eager;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user_table",catalog = "test")
+@Table(name = "user_table")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,10 +20,6 @@ public class User {
     private String jobType;
     @Column(name = "resident")
     private String resident;
-   @OneToOne
-   @JoinColumn(name = "id", referencedColumnName = "id")
-    private Address address;
-
     public User() {
 
     }
